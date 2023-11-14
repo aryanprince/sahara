@@ -3,22 +3,13 @@
 import {
   NavigationMenu,
   NavigationMenuContent,
-  NavigationMenuIndicator,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-  NavigationMenuViewport,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
-import { cn } from "@/lib/utils";
-import {
-  BadgeDollarSign,
-  CalendarClock,
-  Gamepad2,
-  type LucideIcon,
-  type LucideProps,
-} from "lucide-react";
+import { BadgeDollarSign, CalendarClock, Gamepad2 } from "lucide-react";
 import Link from "next/link";
 import React, { type ReactNode } from "react";
 
