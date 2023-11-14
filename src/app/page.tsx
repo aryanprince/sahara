@@ -31,8 +31,16 @@ export default function Home() {
         </section>
 
         {/* Section - Categories */}
-        <section className="flex h-96 w-full flex-col items-center gap-4 bg-muted">
-          <h2 className="mt-4 text-3xl font-bold tracking-tight">Categories</h2>
+        <section className="flex h-96 w-full flex-col items-center gap-8 bg-muted/20 pt-8">
+          <h2 className="text-3xl font-bold tracking-tight">Categories</h2>
+          <div>
+            <CategoryCards />
+          </div>
+        </section>
+
+        {/* Section - Featured Games */}
+        <section className="flex h-96 w-full flex-col items-center gap-8 pt-8">
+          <h2 className="text-3xl font-bold tracking-tight">Featured Games</h2>
           <div className="">
             <CategoryCards />
           </div>

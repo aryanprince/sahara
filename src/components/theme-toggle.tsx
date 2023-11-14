@@ -22,11 +22,13 @@ export function ThemeToggle() {
           <div>
             <Sun
               size={18}
-              className="rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0"
+              // className="rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0"
+              className="block dark:hidden"
             />
             <Moon
               size={18}
-              className="absolute rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100"
+              // className="absolute rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100"
+              className="hidden dark:block"
             />
             <span className="sr-only">Toggle theme</span>
           </div>
