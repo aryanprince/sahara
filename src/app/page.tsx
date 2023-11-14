@@ -1,16 +1,29 @@
 import CategoryCards from "@/components/category-cards";
 import MainNav from "@/components/main-nav";
 import { ThemeToggle } from "@/components/theme-toggle";
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
+
+import { UserButton, auth } from "@clerk/nextjs";
+import Link from "next/link";
 
 export default function Home() {
+  const { userId } = auth();
+
   return (
     <main className="flex min-h-screen flex-col justify-between bg-background text-foreground">
       <header className="flex items-center justify-between px-4 py-2">
         <h1 className="font-semibold tracking-tight">Sahara</h1>
         <MainNav />
         <div className="flex gap-2">
-          <Button variant={"ghost"}>Login</Button>
+          {userId && <UserButton afterSignOutUrl="/" />}
+          {!userId && (
+            <Link
+              className={buttonVariants({ variant: "ghost" })}
+              href="/signin"
+            >
+              Sign In
+            </Link>
+          )}
         </div>
       </header>
       <div className="flex flex-col items-center justify-center">
