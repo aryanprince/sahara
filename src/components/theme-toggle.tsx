@@ -17,10 +17,7 @@ export function ThemeToggle() {
 
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger
-        asChild
-        className="absolute bottom-2 right-2 border-muted"
-      >
+      <DropdownMenuTrigger asChild className="border-muted">
         <Button variant="outline" size={"icon"} className="h-8 w-8">
           <div>
             <Sun

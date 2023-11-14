@@ -1,3 +1,4 @@
+import CategoryCards from "@/components/category-cards";
 import MainNav from "@/components/main-nav";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { Button } from "@/components/ui/button";
@@ -14,7 +15,7 @@ export default function Home() {
       </header>
       <div className="flex flex-col items-center justify-center">
         {/* Hero Section */}
-        <div className="flex flex-col items-center gap-6">
+        <section className="my-40 flex flex-col items-center gap-6">
           <div className="flex flex-col items-center gap-1">
             <h1 className="text-7xl font-bold tracking-tight">
               Welcome to Sahara
@@ -27,11 +28,21 @@ export default function Home() {
             <Button variant={"outline"}>Login</Button>
             <Button variant={"default"}>Sign Up</Button>
           </div>
-        </div>
+        </section>
+
+        {/* Section - Categories */}
+        <section className="flex h-96 w-full flex-col items-center gap-4 bg-muted">
+          <h2 className="mt-4 text-3xl font-bold tracking-tight">Categories</h2>
+          <div className="">
+            <CategoryCards />
+          </div>
+        </section>
       </div>
-      <footer className="flex items-center justify-center gap-4 border-t border-muted py-3">
+      <footer className="flex items-center justify-between gap-4 border-t border-muted p-3">
         <p>Built by Aryan</p>
-        <ThemeToggle />
+        <div>
+          <ThemeToggle />
+        </div>
       </footer>
     </main>
   );
